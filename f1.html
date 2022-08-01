@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <!-- <titel>VOLUNTEER SIGN-UP Form</titel> -->
+        <link rel="stylesheet" href="f1.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <meta http-equiv="X-U-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes">
+        <script type = "text/javascript" src="f1.js"></script>  
+    </head>
+    <body>
+            <div class="container">
+                <div class="heading">Admission Form</div>
+                <form id="form" action="/viewpage.html">
+                    <div class="card-details">
+                        <div class="card-box">
+                            <label class="details">NAME: *</label>
+                            <input type="text" id="fname" name="fname" required onkeyup="checking_fname()" placeholder="First name"><br>
+                             <span id="s1"></span>
+                                
+                            
+                        </div>
+                        <div class="card-box">
+                            <label class="details">LAST NAME: *</label>
+                            <input type="text" id="lname" name="lname" required onkeyup="checking_lname()" placeholder="Last name"><br>
+                                <span id="s2"></span>
+                                 <!-- <label name="details">Last name:</label> -->
+                            
+                        </div>
+                        <div class="card-box">
+                            <label class="details">EMAIL: *</label>
+                            
+                        <!-- </div>
+                        <div class="card-box"> -->
+                            <input type="email" id="email"placeholder="ex: myname@example.com"required onkeyup="checking_email()" ><br>
+                             <span id="s3"></span>
+                                <!-- <label name="details">example@example.com</label> -->
+                            
+                        </div>
+                        <div class="card-box">
+                            <label class="details">PHONE NUMBER: *</label>
+                            
+                        <!-- </div>
+                        <div class="card-box"> -->
+                            <input type="number" id="phone" placeholder="Mobile Number"required onkeyup="checking_phone()"><br>
+                                <span id="s4"></span>
+                                 <!-- <label name="details">Mobile Number</label> -->
+                            
+                        </div>
+                    
+                        <div class="card-box">
+                            <label class="details">DATE OF BIRTH: *</label>
+                            
+                        <!-- </div>
+                        <div class="card-box"> -->
+                            <input type="date" id="dob" name="dob"required><br>
+                            <span id="s6"></span>
+                            
+                        </div>
+
+                        
+                        <div class="card-box">
+                            <label class="details">ADDRESS: *</label>
+                            
+                        <!-- </div>
+                        <div class="card-box"> -->
+                            <input type="address" id="address1"name="large"required onkeyup="checking_address1()" placeholder="Street Address"><br>
+                             <span id="s7"></span>
+                                <!-- <label name="details">Street Address</label> -->
+                            
+                        </div>
+                        <div class="card-box">
+                            <input type="address" id="address2"name="large"required onkeyup="checking_address2()" placeholder="Street Address Line 2"><br>
+                            <span id="s8"></span>
+                               <!-- <label name="details">Street Address Line 2</label> -->
+                            
+                        </div>
+                        <div class="card-box">
+                            <select name="city" id="city" required>
+                                <option value="Vellore">Vellore</option>
+                                <option value="Chennai">Chennai</option>
+                                <option value="Coimbatore">Coimbatore</option>
+                                <option value="Madurai">Madurai</option>
+                              </select><br>
+                              <span id="s9"></span>
+                              <label name="details">City</label>
+                            
+                        </div>
+                        <div class="card-box">
+                            <select name="state" id="state" required>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Goa">Goa</option>
+                              </select><br>
+                              <span id="s10"></span>
+                                 <label name="details">State</label>
+                            
+                        </div>
+                        <div class="card-box">
+                            <input type="number" id="pincode"name="large1" required onkeyup="checking_pincode()">
+                                 <span id="s11"></span><br>
+                                    <label name="pincode">Pin code/Zip code</label>
+                            
+                        </div>
+                        <div class="card-box">
+                            <label class="details">COURSE PREFERENC:  *</label>
+                            
+                        </div>
+                        <div class="card-box">
+                            <label name="details">1 ST CHOICE:</label >
+                                <select name="course1" id="course1" required  >
+                                    <option value="NIL">NIL</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="M.Tech">M.Tech</option>
+                                    <option value="MBA">MBA</option>
+                                    <option value="MSC">MSC</option>
+                                  </select><br>
+                                  <span id="s12"></span>
+                            
+                        </div>
+                        <div class="card-box">
+                            <label name="details">2 ND CHOICE:</label>
+                                <select name="course2" id="course2" required >
+                                    <option value="NIL">NIL</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="M.Tech">M.Tech</option>
+                                    <option value="MBA">MBA</option>
+                                    <option value="MSC">MSC</option>
+                                  </select><br>
+                                  <span id="s13"></span>
+                            
+                        </div>
+                        <div class="card-box">
+                            <label name="details">3 RD CHOICE:</label>
+                                <select name="course3" id="course3" required >
+                                    <option value="NIL">NIL</option>
+                                    <option value="MCA">MCA</option>
+                                    <option value="M.Tech">M.Tech</option>
+                                    <option value="MBA">MBA</option>
+                                    <option value="MSC">MSC</option>
+                                  </select><br>
+                                  <span id="s14"></span>
+                            
+                        </div>
+                        <div class="card-box">
+                            <label class="details">INTRESTED IN:  *</label>
+                            
+                        </div>
+                        <div class="category">
+                            <input class="form-check-input" type="checkbox" value="" id="Sports">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Sports
+                            </label><br>
+                            <input class="form-check-input" type="checkbox" value="" id="Singing">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Singing
+                            </label><br>
+                            <input class="form-check-input" type="checkbox" value="" id="Dance">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Dance
+                            </label><br>
+                            <input class="form-check-input" type="checkbox" value="" id="None" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              None
+                            </label><br>
+                            <span id="s15"></span>
+                            
+                        </div>
+                        <div class="card-box">
+                            <label name="details">Student Photo:  *</label>
+                            
+                        </div>
+                        <div class="card-box">
+                            <input type="file" id="photo" name="filename"required><br>
+                                    <span id="s16"></span>
+                            
+                        </div>
+                        <div class="card-box">
+                            <label name="details">Student Sign:  *</label>
+                            
+                        </div>
+                        <div class="card-box">
+                            <input type="file" id="sign" name="filename"required>
+                            <br>
+                                    <span id="s17"></span>
+                            
+                        
+                       
+
+                    </div>
+                    <div class="circle-form">
+                        <div>
+                            <label class="circle-title">Gender: *</label>
+                            
+                        </div>
+                        <div class="category" data-toggle="buttons">
+                            <input type="radio" id="male" name="fav_language" value="male" required>
+                            <label for="male"name="t">Male</label>
+                            <input type="radio" id="female" name="fav_language" value="female">
+                            <label for="female"name="t">Female</label>
+                            <input type="radio" id="others" name="fav_language" value="Others">
+                            <label for="others" name="t">Others</label><br>
+                            <span id="s5"></span>
+                            
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type = "button" onclick = "myfunction()" value = "Validate" name="submit">
+                        
+                    </div>
+                    <div class="button">
+                        <input name="submit" type="submit" onclick = "myfunction()" value="Preview">
+                        
+                        
+                    </div>
+                    </div>
+                    
+
+                </form>
+            </div>
+
+
+
+
+
+
+
+    </body>
+</html>
